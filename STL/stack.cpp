@@ -1,5 +1,5 @@
 #include<iostream>
-#include<queue>
+#include<stack>
 using namespace std;
 
 int main()
@@ -9,8 +9,8 @@ int main()
     cout<<"enter range of stack : ";
     cin>>n;
 
-    queue<int> s;
-    queue<int> s1;
+    stack<int> s;
+    stack<int> s1;
 
     for(int i=0;i<n;i++)
     {
@@ -24,14 +24,14 @@ int main()
 
     for(int i=0;i<n;i++)
     {
-        int x = s.front();
+        int x = s.top();
         s1.push(x);
         s.pop();
     }
 
     for(int i=0;i<n;i++)
     {
-        int x = s1.front();
+        int x = s1.top();
         cout<<x<<" ";
         s1.pop();
     }
